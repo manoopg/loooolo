@@ -1,0 +1,43 @@
+<html lang="ar"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lolo Learn</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="لوجو.png" alt="شعار التطبيق">
+        </div>
+        <div class="input-container">
+            <div class="input-field">
+                <label for="name">أسمك ايه؟</label>
+                <input type="text" id="name" placeholder="أسمك ايه؟">
+            </div>
+            <div class="input-field">
+                <label for="age">عندك كام سنة؟</label>
+                <input type="number" id="age" placeholder="عندك كام سنة؟">
+            </div>
+        </div>
+        <button id="submit-btn" onclick="redirectToNewPage()">يلا بينا</button>
+        <p id="warning-message" class="hidden" style="opacity: 0;">اكتب اسمك وسنك الأول!</p>
+    </div>
+
+    <script>
+        function redirectToNewPage() {
+            var name = document.getElementById("name").value;
+            var age = document.getElementById("age").value;
+
+            // التحقق مما إذا كانت الحقول ممتلئة بالمعلومات
+            if (name.trim() === "" || age.trim() === "") {
+                document.getElementById("warning-message").classList.remove("hidden");
+                document.getElementById("warning-message").style.opacity = "1";
+            } else {
+                // توجيه المستخدم إلى الصفحة الجديدة
+                window.location.href = "D:/lolo learn script 0/تصنيفات/قوائم.html"; // استبدل بالمسار الصحيح للصفحة الجديدة
+            }
+        }
+    </script>
+
+
+</body></html>
