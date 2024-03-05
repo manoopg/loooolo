@@ -1,0 +1,63 @@
+/* إخفاء الرسالة التحذيرية في البداية */
+#warning-message {
+    display: none;
+}
+
+/* تصميم الرسالة التحذيرية */
+#warning-message {
+    display: block;
+    position: absolute;
+    bottom: +525px; /* تحديد المسافة من الأسفل بشكل أقرب إلى الزر */
+    left: 50%; /* وسط النص */
+    transform: translateX(-50%); /* تحويل النص للمحاذاة الأفقية */
+    padding: 10px 20px;
+    background: linear-gradient(to bottom right, #BF5E81, #F28E85); /* تدرج لون خلفية الرسالة التحذيرية */
+    color: #fff; /* لون الخط في الرسالة التحذيرية */
+    border-radius: 5px; /* تدوير الحواف */
+    opacity: 0; /* إخفاء الرسالة في البداية */
+    transition: opacity 0.5s ease; /* تأثير التحويل التدريجي */
+}
+
+/* عرض الرسالة عند الحاجة */
+.show-warning-message #warning-message {
+    opacity: 1; /* عرض الرسالة بشكل كامل */
+}
+
+body {
+    font-family: "Lateef", cursive;
+    text-align: center;
+    background-image: linear-gradient(to bottom right, #0D0E26, #A67C97, #F28E85); /* تدرج لون خلفية التطبيق */
+    color: #0D0E26; /* لون الخط */
+}
+
+.container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background-image: linear-gradient(to bottom right, #F28E85, #F2B279); /* تدرج لون خلفية مربع التسجيل */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-field input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    background: rgba(255, 255, 255, 0.5); /* تدرج لون خلفية الحقل */
+    color: #0D0E26; /* لون الخط في حقل الإدخال */
+}
+
+#submit-btn {
+    background-color: #BF5E81; /* لون زر بدء التعلم */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative; /* جعل الزر نسبيًا للوضع */
+}
+
+#submit-btn:hover {
+    background-color: #F2B279; /* لون زر بدء التعلم عند التحويم */
+}
